@@ -1,0 +1,21 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class retrivingDynamicPassword {
+	public static void main(String[] args) throws InterruptedException
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\Work Oracle\\SelegenWorkSpace\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://rahulshettyacademy.com/locatorspractice/");
+		Thread.sleep(2000);
+		driver.manage().window().maximize();
+		driver.findElement(By.linkText("Forgot your password?")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.className("reset-pwd-btn")).click();
+		System.err.println(driver.findElement(By.cssSelector("form p")).getText());//get text
+		
+		
+	}
+
+}

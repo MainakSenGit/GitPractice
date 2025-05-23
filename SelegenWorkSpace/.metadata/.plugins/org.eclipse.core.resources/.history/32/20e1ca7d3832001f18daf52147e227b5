@@ -1,0 +1,19 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class dynamicDropDown {
+	public static void main(String[] args)
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\Work Oracle\\SelegenWorkSpace\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
+		driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXTaction")).click();
+		System.out.println(driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXTaction")).getText());
+		driver.findElement(By.xpath("//a[@value='CCU']")).click();
+		driver.findElement(By.xpath("(//a[@value='BLR'])[2]")).click();
+		System.out.println(driver.findElement(By.id("ctl00_mainContent_ddl_destinationStation1_CTXT")).getText());
+	}
+
+}
