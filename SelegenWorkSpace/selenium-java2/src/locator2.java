@@ -28,7 +28,7 @@ public class locator2 {
 				Assert.assertEquals(driver.findElement(By.xpath("//div[@class='login-container']/h1")).getText(), "Welcome to Rahul Shetty Academy");
 				Assert.assertEquals(driver.findElement(By.cssSelector("div[class='login-container'] h2")).getText(), "Hello "+name+",");
 				driver.findElement(By.xpath("//button[text()='Log Out']")).click();
-				System.out.println("Log Out Successful");
+				System.out.println("Log Out Successful.");
 			}
 
 }
