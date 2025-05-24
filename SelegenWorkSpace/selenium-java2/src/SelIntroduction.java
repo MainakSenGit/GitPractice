@@ -18,7 +18,7 @@ public class SelIntroduction {
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com"); //open the URL
 		System.out.println(driver.getTitle());  //get the page title
-		System.out.println(driver.getCurrentUrl()); //get the current URL
+		System.out.println(driver.getCurrentUrl()); //get the current URL.
 		//driver.close(); //close the current window
 		//driver.quit(); it will close all associated windows.
 		
